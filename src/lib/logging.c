@@ -18,8 +18,6 @@
 */
 #include <syslog.h>
 /* Suppress automatic CODE_* fields as we handle those here */
-#define SD_JOURNAL_SUPPRESS_LOCATION
-#include <systemd/sd-journal.h>
 #include "internal_libreport.h"
 
 void (*g_custom_logger)(const char*);
@@ -146,15 +144,6 @@ static void log_handler(int level,
         g_custom_logger(msg + prefix_len);
     }
 
-    if (flags & LOGMODE_JOURNAL) {
-        sd_journal_send("MESSAGE=%s", msg + prefix_len,
-                        "PRIORITY=%d", level,
-                        "CODE_FILE=%s", file,
-                        "CODE_LINE=%d", line,
-                        "CODE_FUNC=%s", func,
-                        "SYSLOG_FACILITY=1",
-                        NULL);
-    }
 }
 
 void log_wrapper(int level,
