@@ -1,4 +1,4 @@
-## libreport
+# libreport
 
 Generic library for reporting various problems to destinations like mailing
 lists, regular files, remote servers and bug tracking tools.
@@ -14,7 +14,7 @@ The library also provides an infrastructure (run_event.h, report_event.conf)
 for automatic execution of shell scripts working with dump directories.
 
 
-### Supported report destinations
+## Supported report destinations
 - **regular files**  : reporter-print
 - **e-mail**         : reporter-mailx
 - **ftp/scp**        : reporter-upload
@@ -26,11 +26,11 @@ for automatic execution of shell scripts working with dump directories.
 - [**Red Hat Customer Portal**](https://access.redhat.com/) : reporter-rhtsupport
 
 
-### Installing
+## Installing
 Please see [**INSTALL**](INSTALL) for build and install steps.
 
 
-### Technologies
+## Technologies
 * [**satyr**](https://github.com/abrt/satyr) - backtrace processing, micro-reports
 * [**Python3**](https://www.python.org/) 
 * [**GLib2**](https://developer.gnome.org/glib/)
