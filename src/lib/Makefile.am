@@ -99,7 +99,6 @@ libreport_la_LIBADD = \
     $(GLIB_LIBS) \
     $(LZMA_LIBS) \
     $(LZ4_LIBS) \
-    $(JOURNAL_LIBS) \
     $(GOBJECT_LIBS) \
     $(AUGEAS_LIBS) \
     $(SATYR_LIBS)
