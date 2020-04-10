@@ -1,4 +1,9 @@
-# libreport
+This is a fork of the original [libreport](https://github.com/abrt/libreport)
+library removing journald support to remove systemd dependency allowing
+to build it in systems without systemd.  
+If you need support for journald, please use the [original one](https://github.com/abrt/libreport) instead.
+
+# libreport-nosystemd
 
 Generic library for reporting various problems to destinations like mailing
 lists, regular files, remote servers and bug tracking tools.
