@@ -97,6 +97,9 @@ tests/package.m4
 testsuite.dir/
 testsuite.log
 
+# KDevelop
+*.kdev4
+
 # misc
 \#*
 *~
